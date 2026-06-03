@@ -1,0 +1,82 @@
+# =========================
+# Python Backend
+# =========================
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.env.local
+
+# Logs
+*.log
+uvicorn.out.log
+uvicorn.err.log
+
+# Database
+*.db
+*.sqlite3
+
+# =========================
+# React Frontend
+# =========================
+crm-frontend/node_modules/
+crm-frontend/build/
+crm-frontend/dist/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Testing & Cache
+# =========================
+coverage/
+.pytest_cache/
+.cache/
+.parcel-cache/
+# =========================
+# Misc
+# =========================
+*.tmp
+*.swp
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Logs
+*.log
+uvicorn.out.log
+uvicorn.err.log
+
+# Database
+*.db
+
+# React
+crm-frontend/node_modules/
+crm-frontend/build/
+
+support-crm-frontend/
+
+*.db
+*.log
+crm-frontend/build/
+
+start-crm.ps1
