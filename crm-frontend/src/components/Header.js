@@ -33,7 +33,7 @@ export default function Header() {
       }}
     >
       <div
-        className="container"
+        className="container header-inner-container"
         style={{
           maxWidth: 1200,
           margin: '0 auto',

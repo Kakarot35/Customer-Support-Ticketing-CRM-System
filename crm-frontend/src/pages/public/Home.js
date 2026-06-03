@@ -28,9 +28,9 @@ export default function Home() {
       >
         <div className="absolute inset-0" style={{ background: 'rgba(0, 0, 0, 0.35)', position: 'absolute' }} />
         <div className="relative z-10 text-center px-4" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <span style={{ fontSize: '3.6rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 12 }}>
+          <span className="hero-main-title" style={{ fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 10, flexWrap: 'wrap', justifyContent: 'center', marginBottom: 12 }}>
             <span>SupportCRM</span>
-            <span style={{ color: 'var(--primary)', fontWeight: 500, fontSize: '2.4rem' }}>· Datastraw</span>
+            <span className="hero-sub-brand" style={{ color: 'var(--primary)', fontWeight: 500 }}>· Datastraw</span>
           </span>
           <p style={{ color: '#334155', fontSize: '1.25rem', margin: 0, fontWeight: 600, maxWidth: 660 }}>
             Streamlined support ticket management for customers and administrators

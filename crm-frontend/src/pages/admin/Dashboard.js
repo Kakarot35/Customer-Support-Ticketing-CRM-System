@@ -101,9 +101,9 @@ export default function AdminDashboard() {
       >
         <div className="absolute inset-0" style={{ background: 'rgba(0, 0, 0, 0.25)', position: 'absolute' }} />
         <div className="relative z-10 text-center" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <span style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, justifyContent: 'center' }}>
+          <span className="hero-main-title" style={{ fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, justifyContent: 'center' }}>
             <span>Admin Dashboard</span>
-            <span style={{ color: 'var(--primary)', fontWeight: 500, fontSize: '1.6rem' }}>· Datastraw</span>
+            <span className="hero-sub-brand" style={{ color: 'var(--primary)', fontWeight: 500 }}>· Datastraw</span>
           </span>
           <p style={{ color: '#334155', fontSize: '1.1rem', margin: 0, fontWeight: 600 }}>
             Manage support tickets and customer issues
@@ -114,15 +114,13 @@ export default function AdminDashboard() {
       {/* Grid Layout Container */}
       <div className="container mx-auto px-4 py-8" style={{ maxWidth: 1200, margin: '0 auto', flex: 1 }}>
         <div
+          className="admin-dashboard-grid"
           style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: 24,
             alignItems: 'start',
           }}
         >
           {/* Left Column: Filters (Col Span 4) */}
-          <div style={{ gridColumn: 'span 4' }}>
+          <div className="admin-filters-col">
             <div className="card" style={{ padding: 20 }}>
               <div className="card-header" style={{ padding: '0 0 16px 0', borderBottom: '1px solid var(--border)' }}>
                 <span className="card-title" style={{ fontSize: '1.1rem' }}>Filters</span>
@@ -171,7 +169,7 @@ export default function AdminDashboard() {
           </div>
 
           {/* Right Column: Tickets & Details (Col Span 8) */}
-          <div style={{ gridColumn: 'span 8', display: 'grid', gap: 24 }}>
+          <div className="admin-content-col">
             {/* Tickets list card */}
             <div className="card" style={{ padding: 24 }}>
               <div className="card-header" style={{ padding: '0 0 16px 0', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -335,7 +333,7 @@ export default function AdminDashboard() {
                   <form onSubmit={handleUpdateSubmit} style={{ borderTop: '1px solid var(--border)', paddingTop: 20 }}>
                     <h4 style={{ margin: '0 0 16px 0', fontSize: '0.95rem', fontWeight: 700 }}>Update Ticket</h4>
                     
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16, marginBottom: 16 }}>
+                    <div className="form-row" style={{ marginBottom: 16 }}>
                       <div>
                         <label className="form-label" style={{ marginBottom: 6 }}>Status</label>
                         <select

@@ -118,9 +118,9 @@ export default function CustomerPortal() {
         </button>
 
         <div className="relative z-10 text-center" style={{ zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          <span style={{ fontSize: '2.5rem', fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, justifyContent: 'center' }}>
+          <span className="hero-main-title" style={{ fontWeight: 800, color: '#0f172a', display: 'flex', alignItems: 'center', gap: 6, marginBottom: 8, justifyContent: 'center' }}>
             <span>Support Center</span>
-            <span style={{ color: 'var(--primary)', fontWeight: 500, fontSize: '1.6rem' }}>· Datastraw</span>
+            <span className="hero-sub-brand" style={{ color: 'var(--primary)', fontWeight: 500 }}>· Datastraw</span>
           </span>
           <p style={{ color: '#334155', fontSize: '1.1rem', margin: 0, fontWeight: 600 }}>Submit and track your support tickets</p>
         </div>
