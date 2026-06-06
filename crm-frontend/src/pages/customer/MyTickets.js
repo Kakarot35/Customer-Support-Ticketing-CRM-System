@@ -84,7 +84,7 @@ export default function MyTickets() {
                       <td style={{ maxWidth: 300, overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', fontWeight: 500 }}>{t.subject}</td>
                       <td><PriorityBadge priority={t.priority} /></td>
                       <td><StatusBadge status={t.status} /></td>
-                      <td style={{ color: 'var(--text2)', fontSize: 12.5 }}>{new Date(t.created_at).toLocaleDateString()}</td>
+                      <td style={{ color: 'var(--text2)', fontSize: 12.5 }}>{new Date(t.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</td>
                     </tr>
                   ))}
                 </tbody>

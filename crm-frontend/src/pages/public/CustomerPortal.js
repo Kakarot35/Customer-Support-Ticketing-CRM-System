@@ -340,11 +340,11 @@ export default function CustomerPortal() {
                   <div className="form-row" style={{ marginBottom: 20 }}>
                     <div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--text3)', textTransform: 'uppercase', fontWeight: 600 }}>Created</div>
-                      <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{new Date(lookupResult.created_at).toLocaleString()}</div>
+                      <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{new Date(lookupResult.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                     <div>
                       <div style={{ fontSize: '0.78rem', color: 'var(--text3)', textTransform: 'uppercase', fontWeight: 600 }}>Last Updated</div>
-                      <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{new Date(lookupResult.updated_at).toLocaleString()}</div>
+                      <div style={{ fontWeight: 500, fontSize: '0.9rem' }}>{new Date(lookupResult.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                   </div>
 
@@ -364,7 +364,7 @@ export default function CustomerPortal() {
                           <div key={note.id} style={{ background: 'var(--surface-soft)', padding: 12, borderRadius: 'var(--radius)', border: '1px solid var(--border)' }}>
                             <div style={{ fontSize: '0.75rem', color: 'var(--text3)', marginBottom: 6, display: 'flex', justifyContent: 'space-between' }}>
                               <span>👤 {note.author}</span>
-                              <span>{new Date(note.created_at).toLocaleString()}</span>
+                              <span>{new Date(note.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</span>
                             </div>
                             <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--text)', lineHeight: 1.5 }}>
                               {note.note_text}

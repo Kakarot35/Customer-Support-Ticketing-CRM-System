@@ -4,6 +4,29 @@ function getToken() {
   return localStorage.getItem('crm_token');
 }
 
+function addZToDates(obj) {
+  if (obj === null || obj === undefined) return obj;
+  if (Array.isArray(obj)) {
+    return obj.map(addZToDates);
+  }
+  if (typeof obj === 'object') {
+    const newObj = {};
+    for (const [key, value] of Object.entries(obj)) {
+      if (typeof value === 'string' && (key.endsWith('_at') || key === 'last_seen')) {
+        if (/^\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}:\d{2}/.test(value) && !value.endsWith('Z') && !value.includes('+')) {
+          newObj[key] = value.replace(' ', 'T') + 'Z';
+        } else {
+          newObj[key] = value;
+        }
+      } else {
+        newObj[key] = addZToDates(value);
+      }
+    }
+    return newObj;
+  }
+  return obj;
+}
+
 async function req(path, options = {}) {
   const token = getToken();
   const headers = { 'Content-Type': 'application/json', ...options.headers };
@@ -12,7 +35,7 @@ async function req(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, { ...options, headers });
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(data.detail || `Error ${res.status}`);
-  return data;
+  return addZToDates(data);
 }
 
 export const api = {
@@ -44,3 +67,4 @@ export const api = {
 function clean(obj) {
   return Object.fromEntries(Object.entries(obj).filter(([,v]) => v != null && v !== '' && v !== 'All'));
 }
+

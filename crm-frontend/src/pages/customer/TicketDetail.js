@@ -106,7 +106,7 @@ export default function CustomerTicketDetail() {
                             <div style={{ flex: 1 }}>
                               <div className="note-meta" style={{ marginBottom: 4 }}>
                                 <span className="note-author">👤 {n.author}</span>
-                                <span className="note-time">{new Date(n.created_at).toLocaleString()}</span>
+                                <span className="note-time">{new Date(n.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</span>
                               </div>
                               <div className="note-text">{n.note_text}</div>
                             </div>
@@ -135,11 +135,11 @@ export default function CustomerTicketDetail() {
                 </div>
                 <div className="detail-field">
                   <div className="detail-label">Created</div>
-                  <div className="detail-value" style={{ fontSize: 13 }}>{new Date(ticket.created_at).toLocaleString()}</div>
+                  <div className="detail-value" style={{ fontSize: 13 }}>{new Date(ticket.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                 </div>
                 <div className="detail-field" style={{ marginBottom: 0 }}>
                   <div className="detail-label">Last Updated</div>
-                  <div className="detail-value" style={{ fontSize: 13 }}>{new Date(ticket.updated_at).toLocaleString()}</div>
+                  <div className="detail-value" style={{ fontSize: 13 }}>{new Date(ticket.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                 </div>
               </div>
             </div>

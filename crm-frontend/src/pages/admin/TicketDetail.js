@@ -121,11 +121,11 @@ export default function AdminTicketDetail() {
                     </div>
                     <div className="detail-field">
                       <div className="detail-label">Submitted On</div>
-                      <div className="detail-value" style={{ fontSize: 13.5 }}>{new Date(ticket.created_at).toLocaleString()}</div>
+                      <div className="detail-value" style={{ fontSize: 13.5 }}>{new Date(ticket.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                     <div className="detail-field">
                       <div className="detail-label">Last Updated</div>
-                      <div className="detail-value" style={{ fontSize: 13.5 }}>{new Date(ticket.updated_at).toLocaleString()}</div>
+                      <div className="detail-value" style={{ fontSize: 13.5 }}>{new Date(ticket.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                   </div>
                   
@@ -171,7 +171,7 @@ export default function AdminTicketDetail() {
                                     </span>
                                   )}
                                 </div>
-                                <span className="note-time">{new Date(n.created_at).toLocaleString()}</span>
+                                <span className="note-time">{new Date(n.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</span>
                               </div>
                               <div className="note-text">{n.note_text}</div>
                             </div>

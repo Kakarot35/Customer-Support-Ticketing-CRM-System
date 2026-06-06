@@ -138,7 +138,7 @@ export default function AdminUsers() {
                           )}
                         </td>
                         <td style={{ color: 'var(--text2)', fontSize: 12.5 }}>
-                          {new Date(u.last_seen).toLocaleDateString()}
+                          {new Date(u.last_seen).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}
                         </td>
                       </tr>
                     );

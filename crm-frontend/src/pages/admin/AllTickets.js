@@ -78,8 +78,7 @@ export default function AdminTickets() {
                       <td><PriorityBadge priority={t.priority} /></td>
                       <td><StatusBadge status={t.status} /></td>
                       <td style={{ color: 'var(--text2)', fontSize: 12.5 }}>
-                        <strong>{new Date(t.created_at).toLocaleDateString()}</strong><br />
-                        <span style={{ fontSize: 11, color: 'var(--text3)' }}>{new Date(t.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                        <strong>{new Date(t.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</strong>
                       </td>
                     </tr>
                   ))}

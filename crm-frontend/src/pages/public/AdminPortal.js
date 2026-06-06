@@ -168,8 +168,8 @@ export default function AdminPortal() {
               <div className="info-grid four">
                 <Info label="Customer" value={selectedTicket.customer_name} />
                 <Info label="Email" value={selectedTicket.customer_email} />
-                <Info label="Created" value={new Date(selectedTicket.created_at).toLocaleString()} />
-                <Info label="Updated" value={new Date(selectedTicket.updated_at).toLocaleString()} />
+                <Info label="Created" value={new Date(selectedTicket.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })} />
+                <Info label="Updated" value={new Date(selectedTicket.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })} />
               </div>
 
               <div className="divider-line" />
@@ -183,7 +183,7 @@ export default function AdminPortal() {
                   <div className="notes-list">
                     {selectedTicket.notes.map((note) => (
                       <article className="note-card public" key={note.id}>
-                        <div className="note-time">{new Date(note.created_at).toLocaleString()}</div>
+                        <div className="note-time">{new Date(note.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                         <p>{note.note_text}</p>
                       </article>
                     ))}

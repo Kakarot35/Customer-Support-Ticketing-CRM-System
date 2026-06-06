@@ -222,10 +222,10 @@ export default function AdminDashboard() {
                             <strong>Email:</strong> {t.customer_email}
                           </div>
                           <div>
-                            <strong>Created:</strong> {new Date(t.created_at).toLocaleDateString()}
+                            <strong>Created:</strong> {new Date(t.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}
                           </div>
                           <div>
-                            <strong>Updated:</strong> {new Date(t.updated_at).toLocaleDateString()}
+                            <strong>Updated:</strong> {new Date(t.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}
                           </div>
                         </div>
                       </div>
@@ -271,11 +271,11 @@ export default function AdminDashboard() {
                     </div>
                     <div>
                       <div style={{ color: 'var(--text3)', fontWeight: 600 }}>Created Date</div>
-                      <div style={{ fontWeight: 500 }}>{new Date(selectedTicket.created_at).toLocaleString()}</div>
+                      <div style={{ fontWeight: 500 }}>{new Date(selectedTicket.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                     <div>
                       <div style={{ color: 'var(--text3)', fontWeight: 600 }}>Last Updated</div>
-                      <div style={{ fontWeight: 500 }}>{new Date(selectedTicket.updated_at).toLocaleString()}</div>
+                      <div style={{ fontWeight: 500 }}>{new Date(selectedTicket.updated_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</div>
                     </div>
                   </div>
 
@@ -318,7 +318,7 @@ export default function AdminDashboard() {
                                   </span>
                                 )}
                               </span>
-                              <span>{new Date(note.created_at).toLocaleString()}</span>
+                              <span>{new Date(note.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata', hour12: true })}</span>
                             </div>
                             <p style={{ margin: 0, fontSize: '0.88rem', color: 'var(--text)', lineHeight: 1.5 }}>
                               {note.note_text}
